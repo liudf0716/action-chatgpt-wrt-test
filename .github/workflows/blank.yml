@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Running chatgpt proxy
-      uses: liudf0716/Running-chatgpt-proxy@main
+      uses: liudf0716/action-chatgpt-wrt@main
       with:
         chatgptd-server-host: ${{ secrets.CHATGPTD_SERVER_HOST }}
         chatgptd-server-port: ${{ secrets.CHATGPTD_SERVER_PORT }}
