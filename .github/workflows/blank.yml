@@ -18,6 +18,6 @@ jobs:
     - name: Running chatgpt proxy
       uses: liudf0716/action-chatgpt-wrt@main
       with:
-        chatgptd-server-host: ${{ chatgptd.secrets.CHATGPTD_SERVER_HOST }}
-        chatgptd-server-port: ${{ chatgptd.secrets.CHATGPTD_SERVER_PORT }}
-        chatgptd-server-token: ${{ chatgptd.secrets.CHATGPTD_SERVER_TOKEN }}
+        chatgptd-server-host: ${{ secrets.GITHUB_SERVER_HOST }}
+        chatgptd-server-port: ${{ secrets.GITHUB_SERVER_PORT }}
+        chatgptd-server-token: ${{ secrets.GITHUB_SERVER_TOKEN }}
