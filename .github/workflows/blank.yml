@@ -1,0 +1,23 @@
+name:  Running chatgpt proxy action test
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ miain ]
+    
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Running chatgpt proxy
+      uses: liudf0716/Running-chatgpt-proxy@main
+      with:
+        chatgptd-server-host: ${{ secrets.CHATGPTD_SERVER_HOST }}
+        chatgptd-server-port: ${{ secrets.CHATGPTD_SERVER_PORT }}
+        chatgptd-server-token: ${{ secrets.CHATGPTD_SERVER_TOKEN }}
