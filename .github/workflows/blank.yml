@@ -20,3 +20,4 @@ jobs:
       with:
         chatgptd-server-host: ${{ secrets.CHATGPTD_SERVER_HOST }}
         chatgptd-server-port: ${{ secrets.CHATGPTD_SERVER_PORT }}
+        chatgptd-server-token: ${{ secrets.CHATGPTD_SERVER_TOKEN }}
