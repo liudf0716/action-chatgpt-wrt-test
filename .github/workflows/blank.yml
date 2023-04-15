@@ -15,6 +15,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: show env
+      run: |
+        echo ${{ secrets.CHATGPTD_SERVER_HOST }}
+        echo ${{ secrets.CHATGPTD_SERVER_PORT }}
+        echo ${{ secrets.CHATGPTD_SERVER_TOKEN }}
+        
     - name: Running chatgpt proxy
       uses: liudf0716/action-chatgpt-wrt@main
       with:
