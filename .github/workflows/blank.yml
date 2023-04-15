@@ -18,7 +18,7 @@ jobs:
     - name: show env
       run: |
         echo "========="
-        echo ${{ secrets.chatgpt.CHATGPTD_SERVER_HOST }}
+        echo ${{ chatgpt.CHATGPTD_SERVER_HOST }}
         echo ${{ secrets.CHATGPTD_SERVER_PORT }}
         echo ${{ secrets.CHATGPTD_SERVER_TOKEN }}
         echo ${{ env.ENV_TEST }}
