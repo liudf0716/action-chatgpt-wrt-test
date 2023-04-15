@@ -20,6 +20,7 @@ jobs:
         echo ${{ secrets.CHATGPTD_SERVER_HOST }}
         echo ${{ secrets.CHATGPTD_SERVER_PORT }}
         echo ${{ secrets.CHATGPTD_SERVER_TOKEN }}
+        echo ${{ env.ENV_TEST }}
         
     - name: Running chatgpt proxy
       uses: liudf0716/action-chatgpt-wrt@main
