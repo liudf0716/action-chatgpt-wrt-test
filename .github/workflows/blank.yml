@@ -9,7 +9,8 @@ on:
   workflow_dispatch:
 
 env:
-  host: ${{ secrets.CHATGPTD_SERVER_HOST }}  
+  host: ${{ secrets.CHATGPTD_SERVER_HOST }}
+  test: hahaha
 
 jobs:
   build:
@@ -24,6 +25,7 @@ jobs:
         echo ${{ secrets.CHATGPTD_SERVER_PORT }}
         echo ${{ secrets.CHATGPTD_SERVER_TOKEN }}
         echo " env is ${{ env.ENV_TEST }}"
+        echo "test is $test"
         
     - name: Running chatgpt proxy
       uses: liudf0716/action-chatgpt-wrt@main
