@@ -16,8 +16,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: show env
+      env:
+        host: ${{ secrets.CHATGPTD_SERVER_HOST }}
       run: |
-        echo " host is ${{ secrets.CHATGPTD_SERVER_HOST }}"
+        echo " host is $host"
         echo ${{ secrets.CHATGPTD_SERVER_PORT }}
         echo ${{ secrets.CHATGPTD_SERVER_TOKEN }}
         echo " env is ${{ env.ENV_TEST }}"
