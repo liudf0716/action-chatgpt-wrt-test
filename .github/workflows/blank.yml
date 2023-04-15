@@ -8,6 +8,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  host: ${{ secrets.CHATGPTD_SERVER_HOST }}  
+
 jobs:
   build:
 
@@ -16,10 +19,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: show env
-      env:
-        host: ${{ secrets.CHATGPTD_SERVER_HOST }}
       run: |
-        echo " host is $env:host"
+        echo " host is $host"
         echo ${{ secrets.CHATGPTD_SERVER_PORT }}
         echo ${{ secrets.CHATGPTD_SERVER_TOKEN }}
         echo " env is ${{ env.ENV_TEST }}"
