@@ -19,7 +19,7 @@ jobs:
       env:
         host: ${{ secrets.CHATGPTD_SERVER_HOST }}
       run: |
-        echo " host is $host"
+        echo " host is $env:host"
         echo ${{ secrets.CHATGPTD_SERVER_PORT }}
         echo ${{ secrets.CHATGPTD_SERVER_TOKEN }}
         echo " env is ${{ env.ENV_TEST }}"
