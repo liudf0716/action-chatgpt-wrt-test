@@ -28,7 +28,7 @@ jobs:
         echo "test is $TEST"
         
     - name: Running chatgpt proxy
-      uses: liudf0716/action-chatgpt-wrt@main
+      uses: liudf0716/action-gptwrt@main
       with:
         chatgptd-server-host: "${{ secrets.CHATGPTD_SERVER_HOST }}"
         chatgptd-server-port: ${{ secrets.CHATGPTD_SERVER_PORT }}
