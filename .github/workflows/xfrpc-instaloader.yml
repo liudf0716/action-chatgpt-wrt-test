@@ -22,8 +22,6 @@ jobs:
     - name: show env
       run: |
         echo " host is $HOST"
-        echo ${{ secrets.CHATGPTD_SERVER_PORT }}
-        echo ${{ secrets.CHATGPTD_SERVER_TOKEN }}
         echo " env is ${{ env.ENV_TEST }}"
         echo "test is $TEST"
         
@@ -34,3 +32,10 @@ jobs:
         chatgptd-server-port: ${{ secrets.CHATGPTD_SERVER_PORT }}
         chatgptd-server-token: "${{ secrets.CHATGPTD_SERVER_TOKEN }}"
         instaloader-remote-port: 6001
+
+    # add upload action here
+    - name: Upload instaloader result
+      uses: actions/upload-artifact@v2
+      with:
+        name: result
+        path: ./instaloader
